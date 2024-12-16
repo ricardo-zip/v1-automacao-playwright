@@ -1,0 +1,21 @@
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+  name: CI Workflow
+
+  jobs:
+    playwright:
+      uses: octo-org/example-repo/.github/workflows/reusable-workflow.yml@main
+      with:
+        config-path: .github/workflows/playwright.yml
+      secrets: inherit
+
+    sonarqube:
+      uses: octo-org/example-repo/.github/workflows/reusable-workflow.yml@main
+      with:
+        config-path: .github/workflows/sonar.yml
+      secrets: inherit
