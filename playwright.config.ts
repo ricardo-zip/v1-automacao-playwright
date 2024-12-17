@@ -28,7 +28,7 @@ export default defineConfig({
     trace: 'on-first-retry',
     headless: true,
     baseURL: '',
-    screenshot: 'on',
+    screenshot: 'off',
   },
 
   /* Configure projects for major browsers */

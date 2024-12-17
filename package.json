@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Implementação de testes automatizados web ultilizando o framework playwright",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npx playwright test",
+    "debug": "npx playwright test --debug"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
