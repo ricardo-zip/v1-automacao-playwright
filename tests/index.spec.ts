@@ -13,7 +13,6 @@ test.describe('Modal - Teste Grátis', () => {
 
   test('Deve validar campos obrigatorios', async ({ page }) => {
     await expect(page).toHaveTitle(/Easyjur Software jurídico/);
-    await homePage.cliqueButtonHome('Aceitar');
     await homePage.cliqueButtonHome('Teste Grátis');
     await homePage.cliqueButtonModal('Solicite seu teste')
     await expect(page.getByRole('dialog', { name: 'Popup CTA' })).toBeVisible();
@@ -30,7 +29,6 @@ test.describe('Modal - Teste Grátis', () => {
 
   test('Deve realizar uma solicitação de teste grátis realizada com sucesso', async ({ page }) => {
     await expect(page).toHaveTitle(/Easyjur Software jurídico/);
-    await homePage.cliqueButtonHome('Aceitar');
     await homePage.cliqueButtonHome('Teste Grátis');
     await expect(page.getByRole('dialog', { name: 'Popup CTA' })).toBeVisible();
     await homePage.preencherCamposModal(selectors.input.firstname, 'Ricardo Dias');
