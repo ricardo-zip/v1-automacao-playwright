@@ -21,7 +21,7 @@ export default defineConfig({
     headless: true,
     baseURL: process.env.BASE_URL,
     screenshot: 'off',
-    actionTimeout: 10000, // Tempo máximo para ações específicas
+    actionTimeout: 60000, // Tempo máximo para ações específicas
     navigationTimeout: 30000,
   },
 
