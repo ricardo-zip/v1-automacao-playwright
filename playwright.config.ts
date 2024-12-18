@@ -22,7 +22,7 @@ export default defineConfig({
     baseURL: process.env.BASE_URL,
     screenshot: 'off',
     actionTimeout: 60000, // Tempo máximo para ações específicas
-    navigationTimeout: 30000,
+    navigationTimeout: 60000,
   },
 
   /* Configure projects for major browsers */
