@@ -15,11 +15,14 @@ export default defineConfig({
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+
   use: {
     trace: 'on-first-retry',
     headless: true,
     baseURL: process.env.BASE_URL,
     screenshot: 'off',
+    actionTimeout: 10000, // Tempo máximo para ações específicas
+    navigationTimeout: 30000,
   },
 
   /* Configure projects for major browsers */
