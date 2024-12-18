@@ -15,7 +15,7 @@ test.beforeEach(async ({ page }) => {
 
 test.describe('Modal - Teste Grátis', () => {
 
-  test('validar campos obrigatorios', async ({ page }) => {
+  test('Deve validar campos obrigatorios', async ({ page }) => {
     await homePage.cliqueButtonModal('Solicite seu teste')
     await homePage.validarMenssagemError(selectors.error.firstnameError, 'Preencha esse campo obrigatório');
     await homePage.validarMenssagemError(selectors.error.phoneError, 'Preencha esse campo obrigatório');
@@ -28,7 +28,7 @@ test.describe('Modal - Teste Grátis', () => {
     await homePage.validarMenssagemError(selectors.error.demonstrationOptionError, 'Preencha esse campo obrigatório');
   });
 
-  test('solicitação de teste grátis realizada com sucesso', async ({ page }) => {
+  test('Deve realizar uma solicitação de teste grátis realizada com sucesso', async ({ page }) => {
     await homePage.preencherCamposModal(selectors.input.firstname, 'Ricardo Dias');
     await homePage.selecionarOpcao(selectors.input.countryCode, 'BR');
     await homePage.preencherCamposModal(selectors.input.phone, '11992020304');
