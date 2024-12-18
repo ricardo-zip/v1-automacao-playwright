@@ -1,0 +1,28 @@
+{
+    "error": {
+      "firstnameError": "#firstname-error",
+      "phoneError": "#phone-error",
+      "emailError": "#email-error",
+      "positionOrFunctionError": "#cargo_ou_funcao-error",
+      "companySizeError": "#quantas_pessoas_trabalham_na_empresa-error",
+      "advocacyChallengeError": "#qual_o_seu_desafio_na_advocacia_4_0_-error",
+      "officeRevenueError": "#faturamento_do_escritorio-error",
+      "activeProcessesError": "#processos_ativos_escritorio-error",
+      "demonstrationOptionError": "#assistir_demonstracao-error",
+      "closeButton": "#interactive-close-button"
+    },
+    "input": {
+      "firstname": "#firstname-input",
+      "countryCode": "#international-country-code-select-input",
+      "phone": "#phone-input",
+      "email": "#email-input",
+      "positionOrFunction": "#cargo_ou_funcao-input",
+      "companySize": "#quantas_pessoas_trabalham_na_empresa-input",
+      "advocacyChallenge": "#qual_o_seu_desafio_na_advocacia_4_0_-input",
+      "officeRevenue": "#faturamento_do_escritorio-input",
+      "activeProcesses": "#processos_ativos_escritorio-input",
+      "demonstrationOption": "#assistir_demonstracao-input",
+      "closeButton": "#interactive-close-button"
+    }
+  }
+  
