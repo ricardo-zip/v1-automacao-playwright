@@ -20,9 +20,7 @@ export default defineConfig({
     trace: 'on-first-retry',
     headless: true,
     baseURL: process.env.BASE_URL,
-    screenshot: 'off',
-    actionTimeout: 60000, // Tempo máximo para ações específicas
-    navigationTimeout: 60000,
+    screenshot: 'off'
   },
 
   /* Configure projects for major browsers */
