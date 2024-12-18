@@ -25,7 +25,7 @@ test.describe('Modal - Teste Grátis', () => {
     await homePage.selecionarOpcao(selectors.input.officeRevenue, 'Até 50 mil/ano');
     await homePage.selecionarOpcao(selectors.input.activeProcesses, 'Até 40 processos');
     await homePage.selecionarOpcao(selectors.input.demonstrationOption, 'Sim');
-    await homePage.cliqueButtonModal('Solicite seu teste')
+    await homePage.cliqueButtonModal('Solicite seu teste gratuitamente')
     await expect(page.getByText('Obrigado!')).toBeVisible();
   })
 
