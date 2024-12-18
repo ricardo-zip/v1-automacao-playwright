@@ -10,7 +10,6 @@ test.beforeEach(async ({ page }) => {
   await homePage.acessarPaginaWeb()
   await expect(page).toHaveTitle(/Easyjur Software jurídico/);
   await homePage.cliqueButtonHome('Teste Grátis');
-  await homePage.cliqueButtonHome('Aceitar');
   await expect(page.getByRole('dialog', { name: 'Popup CTA' })).toBeVisible();
 })
 
