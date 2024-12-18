@@ -7,15 +7,14 @@ let homePage: HomePage
 test.beforeEach(async ({ page }) => {
   homePage = new HomePage(page)
   await homePage.acessarPaginaWeb()
+  await expect(page).toHaveTitle(/Easyjur Software jurídico/);
+  await homePage.cliqueButtonHome('Teste Grátis');
+  await expect(page.getByRole('dialog', { name: 'Popup CTA' })).toBeVisible();
 })
 
 test.describe('Modal - Teste Grátis', () => {
-
   test('Deve validar campos obrigatorios', async ({ page }) => {
-    await expect(page).toHaveTitle(/Easyjur Software jurídico/);
-    await homePage.cliqueButtonHome('Teste Grátis');
     await homePage.cliqueButtonModal('Solicite seu teste')
-    await expect(page.getByRole('dialog', { name: 'Popup CTA' })).toBeVisible();
     await homePage.validarMenssagemError(selectors.error.firstnameError, 'Preencha esse campo obrigatório');
     await homePage.validarMenssagemError(selectors.error.phoneError, 'Preencha esse campo obrigatório');
     await homePage.validarMenssagemError(selectors.error.emailError, 'Preencha esse campo obrigatório');
@@ -28,9 +27,6 @@ test.describe('Modal - Teste Grátis', () => {
   });
 
   test('Deve realizar uma solicitação de teste grátis realizada com sucesso', async ({ page }) => {
-    await expect(page).toHaveTitle(/Easyjur Software jurídico/);
-    await homePage.cliqueButtonHome('Teste Grátis');
-    await expect(page.getByRole('dialog', { name: 'Popup CTA' })).toBeVisible();
     await homePage.preencherCamposModal(selectors.input.firstname, 'Ricardo Dias');
     await homePage.selecionarOpcao(selectors.input.countryCode, 'BR');
     await homePage.preencherCamposModal(selectors.input.phone, '11992020304');
@@ -44,5 +40,4 @@ test.describe('Modal - Teste Grátis', () => {
     await homePage.cliqueButtonModal('Solicite seu teste');
     await expect(page.getByText('Obrigado!')).toBeVisible();
   })
-
 })
